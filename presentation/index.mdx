@@ -1,0 +1,199 @@
+import { Cite, Image } from 'spectacle'
+import { DarkSlide, CodeSlide, LeftSlide, BgSlide } from './slides'
+import RegularComponent from './regular-component'
+import { TextImage } from './custom'
+import process from '../assets/process.png'
+import what from '../assets/what.jpg'
+
+export default BgSlide
+
+export const textColor = 'white'
+
+# 前端异常监控
+
+<br/>
+<br/>
+
+**Zhuo.Li**
+
+---
+
+#### 为什么需要前端监控
+
+---
+
+<TextImage src={what}>
+  测试：页面白屏了
+  <br/>
+  用户：按钮点击没反应
+  <br/>
+  开发：我的咋可以
+</TextImage>
+
+---
+
+* 代码隐藏的逻辑缺陷或错误
+* 浏览器版本(移动设备)差异
+* 用户奇怪的操作
+* 资源, 服务异常
+* ...
+
+---
+
+重现用户行为
+快速分析定位  
+智能预警  
+保证项目正常运行  
+监测用户页面性能
+
+---
+
+# 脚本报错
+
+---
+
+错误图片
+
+---
+
+#### try catch
+
+---
+
+#### window.onerror
+
+---
+
+source map
+
+---
+
+corossorigin
+
+---
+
+promise async
+
+---
+
+框架自带的错误机制
+
+---
+
+# http请求错误
+
+---
+
+ajax
+
+---
+
+fetch
+
+---
+
+# 资源加载错误
+
+---
+
+css 中的资源
+
+---
+
+# 性能监控
+
+---
+
+<Image src={process} />
+
+---
+
+localstorage indexDB 存储 离线缓存 节流
+
+---
+
+数据压缩
+
+---
+
+日志存储
+
+---
+
+分析 grafana
+
+---
+
+报警
+
+---
+
+跟踪
+
+---
+
+![datboi](https://pbs.twimg.com/media/CkjFUyTXEAEysBY.jpg)
+
+---
+
+<RegularComponent />
+
+---
+
+###### Typography
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+Standard Text
+
+---
+
+###### Standard List
+
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+
+---
+
+> Example Quote
+
+<Cite>Author</Cite>
+
+---
+
+export default CodeSlide
+
+```javascript
+class SuperCoolComponent extends React.Component {
+  render() {
+    return <p>code slide works in markdown too whaaaaat</p>
+  }
+}
+```
+
+---
+
+export default DarkSlide
+
+export const transition = ['slide']
+
+# Write your Spectacle Presentations in Markdown
+
+## And seamlessly use React Components
+
+**How sweet is that**  
+**(super sweet)**
+
+---

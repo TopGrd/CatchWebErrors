@@ -1,12 +1,12 @@
 import { Cite, Image } from 'spectacle'
 import { DarkSlide, CodeSlide, LeftSlide, BgSlide } from './slides'
 import RegularComponent from './regular-component'
-import { TextImage } from './custom'
+import { TextImage, Iframe } from './custom'
 import process from '../assets/process.png'
 import what from '../assets/what.jpg'
 import jserror from '../assets/jserror.png'
 import errorType from '../assets/errorType.png'
-import onErrorCode from '../assets/errorcode.svg';
+import onErrorCode from '../assets/errorcode.svg'
 import crossscript from '../assets/crossscript.svg'
 
 export default BgSlide
@@ -27,14 +27,13 @@ export const textColor = 'white'
 ---
 
 <TextImage src={what}>
-  甲用户: 点击XX按钮之后页面白屏了 
+  甲用户: 点击XX按钮之后页面白屏了
   <br />
   乙用户: 优惠劵消费后，支付金额显示不正确
   <br />
   丙用户：最近页面特别卡，点击tab好久才能反应过来
   <br />
   开发: 我这边没问题呀
-  
 </TextImage>
 
 ---
@@ -71,37 +70,59 @@ export const textColor = 'white'
 
 ---
 
-<iframe
-  src="https://codesandbox.io/embed/7173roxxn1?autoresize=1&expanddevtools=1"
-  style={{ width: '80vw', height: '500px', border: 0, minWidth: 1200 }}
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-/>
-
----
-<iframe
-  src="https://stackblitz.com/edit/js-denjeb"
-  style={{ width: '80vw', height: '500px', border: 0, minWidth: 1200 }}
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-/>
----
-
 #### try catch
+
+<Iframe src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=try%2520%257B%250A%2520%2520run()%250A%257D%2520catch%2520(error)%2520%257B%250A%2520%2520console.log(error)%250A%257D%250A&es=4x&wm=false" />
+
+---
+
+<Iframe src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=try%2520%257B%250A%2520%2520setTimeout(()%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520run()%250A%2520%2520%257D%252C%25200)%250A%257D%2520catch%2520(error)%2520%257B%250A%2520%2520console.log('error%253A'%252C%2520error)%250A%257D%250A&es=4x&wm=false" />
+
+---
+
+<Iframe src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=let%2520mark%250Atry%2520%257B%250A%2520%2520const%2520s%2520%253D%2520'mark'%250A%2520%2520mark%2520%253D%2520s.split('.')%25EF%25BC%259B%250A%257D%2520catch%2520(error)%2520%257B%250A%2520%2520console.log('error%253A'%252C%2520error)%250A%257D&es=4x&wm=false" />
 
 ---
 
 #### window.onerror
 
+<Iframe src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=15.5px&lh=187%25&si=false&code=window.onerror%2520%253D%2520function%2520errorHandler(message%252C%2520source%252C%2520lineno%252C%2520colno%252C%2520error)%2520%257B%250A%2520%2520%252F%252F%2520your%2520error%2520handler%250A%2520%2520console.table(%257B%2520message%252C%2520source%252C%2520lineno%252C%2520colno%252C%2520error%2520%257D)%250A%2520%2520return%2520true%253B%250A%257D&es=4x&wm=false" />
+
 ---
 
+###### 一个简单的错误上报
+
+<Iframe src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=window.onerror%2520%253D%2520(a%252C%2520b%252C%2520c%252C%2520d%252C%2520e)%2520%253D%253E%2520(new%2520Image).src%2520%253D%2520%2560http%253A%252F%252Flocalhost%253A8080%252Freport%253Fa%253D%2524%257Ba%257D%2526b%253D%2524%257Bb%257D%2526c%253D%2524%257Bc%257D%2526d%253D%2524%257Bd%257D%2526e%253D%2524%257Be.stack%257D%2560&es=4x&wm=false" />
+
+---
 #### corossorigin
+
 <Image src={crossscript} />
----
-
-promise async
 
 ---
 
-框架自带的错误机制
+#### promise async
+
+<Iframe
+  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=const%2520getUser%2520%253D%2520async%2520()%2520%253D%253E%250A%2520%2520new%2520Promise(resolve%2520%253D%253E%250A%2520%2520%2520%2520setTimeout(()%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520resolve(%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520name%253A%2520'%25E5%25BC%25A0%25E4%25B8%2589'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520id%253A%25201%252C%250A%2520%2520%2520%2520%2520%2520%257D)%250A%2520%2520%2520%2520%257D%252C%25200)%250A%2520%2520)%250A%250A%253B(async%2520()%2520%253D%253E%2520%257B%250A%2520%2520try%2520%257B%250A%2520%2520%2520%2520const%2520user%2520%253D%2520await%2520getUser()%250A%2520%2520%2520%2520console.log(user)%250A%2520%2520%257D%2520catch%2520(error)%2520%257B%250A%2520%2520%2520%2520console.error(error)%250A%2520%2520%257D%250A%257D)()%250A&es=4x&wm=false"
+  style={{
+    height: '80vh',
+  }}
+/>
+
+---
+
+<Iframe
+  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=window.addEventListener('unhandledrejection'%252C%2520e%2520%253D%253E%2520%257B%250A%2520%2520e.preventDefault()%250A%2520%2520console.log(e.reason.stack)%250A%257D)%250A%250Anew%2520Promise((resolve%252C%2520reject)%2520%253D%253E%2520reject(new%2520Error('ee')))&es=4x&wm=false"
+/>
+
+---
+
+#### 框架自带的错误机制
+
+* react componentDidCatch
+* dva onError
+* Vue.config.errorHandler
 
 ---
 
@@ -109,24 +130,44 @@ promise async
 
 ---
 
-ajax
+#### ajax
+
+复写 XMLHttpRequest 原型上的方法 (open, send)
+
 
 ---
 
-fetch
+#### fetch
+
+1. 复写 fetch, 添加 then 检查请求结果 http code
+2. 将错误的 http code 进行抛出(throw)
+3. 添加 catch 进行异常捕获
 
 ---
 
-# 资源加载错误
-
+#### 资源加载错误
+<Iframe
+  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=61px&ph=56px&ln=true&fm=Source%20Code%20Pro&fs=18px&lh=187%25&si=false&code=document.addEventListener('error'%252C%2520(e)%2520%253D%253E%2520%257B%250A%2520%2520console.log(e.target.tagName.toLowerCase())%253B%250A%2520%2520console.log(e.target.src)%253B%250A%257D%252C%2520true)&es=4x&wm=false"
+/>
 ---
 
 #### source map
+
 [https://www.npmjs.com/package/source-map](https://www.npmjs.com/package/source-map)
 
 ---
 
 css 中的资源
+
+---
+
+#### 用户行为
+
+* 对 EventTarget 进行拦截  
+* 拦截 EventTarget.prototype.addEventListener
+* 对 event 操作取值
+
+[EventTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget)
 
 ---
 
@@ -142,12 +183,17 @@ css 中的资源
 
 ---
 
+# 搭建前端监控系统
+
+---
+
 <Image src={process} />
 
 ---
 
-#### 存储
-localstorage indexDB 离线缓存 
+#### 客户端存储
+
+localstorage indexDB 离线缓存
 
 ---
 
@@ -242,5 +288,13 @@ export const transition = ['slide']
 
 **How sweet is that**  
 **(super sweet)**
+
+---
+
+<iframe
+  src="https://codesandbox.io/s/w0zkvq94j7?autoresize=1&expanddevtools=1&fontsize=18"
+  style={{ width: '80vw', height: '80vh', border: 0, minWidth: 1200 }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
 
 ---

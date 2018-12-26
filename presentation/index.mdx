@@ -4,6 +4,10 @@ import RegularComponent from './regular-component'
 import { TextImage } from './custom'
 import process from '../assets/process.png'
 import what from '../assets/what.jpg'
+import jserror from '../assets/jserror.png'
+import errorType from '../assets/errorType.png'
+import onErrorCode from '../assets/errorcode.svg';
+import crossscript from '../assets/crossscript.svg'
 
 export default BgSlide
 
@@ -23,28 +27,31 @@ export const textColor = 'white'
 ---
 
 <TextImage src={what}>
-  测试：页面白屏了
-  <br/>
-  用户：按钮点击没反应
-  <br/>
-  开发：我的咋可以
+  甲用户: 点击XX按钮之后页面白屏了 
+  <br />
+  乙用户: 优惠劵消费后，支付金额显示不正确
+  <br />
+  丙用户：最近页面特别卡，点击tab好久才能反应过来
+  <br />
+  开发: 我这边没问题呀
+  
 </TextImage>
 
 ---
 
-* 代码隐藏的逻辑缺陷或错误
-* 浏览器版本(移动设备)差异
-* 用户奇怪的操作
-* 资源, 服务异常
-* ...
+1. 代码隐藏的逻辑缺陷或错误
+2. 浏览器版本(移动设备)差异
+3. 用户奇怪的操作
+4. 资源, 服务异常
+5. ...
 
 ---
 
 重现用户行为
 快速分析定位  
+监测用户页面性能  
 智能预警  
-保证项目正常运行  
-监测用户页面性能
+保证项目正常运行
 
 ---
 
@@ -52,8 +59,30 @@ export const textColor = 'white'
 
 ---
 
-错误图片
+<Image src={jserror} />
 
+---
+
+<Image src={errorType} />
+
+---
+
+<Image src={onErrorCode} />
+
+---
+
+<iframe
+  src="https://codesandbox.io/embed/7173roxxn1?autoresize=1&expanddevtools=1"
+  style={{ width: '80vw', height: '500px', border: 0, minWidth: 1200 }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
+
+---
+<iframe
+  src="https://stackblitz.com/edit/js-denjeb"
+  style={{ width: '80vw', height: '500px', border: 0, minWidth: 1200 }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
 ---
 
 #### try catch
@@ -64,12 +93,8 @@ export const textColor = 'white'
 
 ---
 
-source map
-
----
-
-corossorigin
-
+#### corossorigin
+<Image src={crossscript} />
 ---
 
 promise async
@@ -80,7 +105,7 @@ promise async
 
 ---
 
-# http请求错误
+# http 请求错误
 
 ---
 
@@ -96,6 +121,11 @@ fetch
 
 ---
 
+#### source map
+[https://www.npmjs.com/package/source-map](https://www.npmjs.com/package/source-map)
+
+---
+
 css 中的资源
 
 ---
@@ -104,11 +134,28 @@ css 中的资源
 
 ---
 
+#### 页面白屏时间
+
+---
+
+#### 页面卡顿时间
+
+---
+
 <Image src={process} />
 
 ---
 
-localstorage indexDB 存储 离线缓存 节流
+#### 存储
+localstorage indexDB 离线缓存 
+
+---
+
+节流
+
+---
+
+上报时间
 
 ---
 

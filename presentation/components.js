@@ -64,6 +64,7 @@ export default {
   codespan: Code,
   li: styled(ListItem)`
     margin-bottom: 3.5rem;
+    text-align: left;
   `,
   p: styled(Text)`
     text-align: left;
@@ -71,10 +72,14 @@ export default {
   `,
   strong: _S('bold'),
   ul: List,
-  table: Table,
+  table: styled(Table)`
+    text-align: left;
+  `,
   thead: TableHeader,
   th: TableHeaderItem,
   tbody: TableBody,
   tr: TableRow,
-  td: TableItem,
+  td: styled(TableItem)`
+    border: 1px solid #ddd;
+  `,
 }

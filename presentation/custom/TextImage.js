@@ -24,6 +24,7 @@ export default class TextImage extends React.Component {
         <div
           style={{
             display: 'flex',
+            width: '70%',
           }}
         >
           <CenterText>{children}</CenterText>
